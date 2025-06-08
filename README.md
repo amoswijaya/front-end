@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Front-End Project with Next.js & Firebase Authentication & Firestore Database
 
-## Getting Started
+Welcome to the Front-End project built with Next.js and Firebase Authentication. This documentation will guide you through cloning, setting up, and running the app locally.
 
-First, run the development server:
+## Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 16 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/)
+
+## Step 1: Clone the Repository
+
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/amoswijaya/front-end.git
+cd front-end
+
+```
+
+## Step 2: Install Dependencies
+
+Install all required dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Step 3: Configure Firebase
+Create a Firebase Project: Go to Firebase Console and create a new project.
+
+Add a Web App: In your Firebase project, add a web application and copy the Firebase config.
+
+Create .env.local: At the project root, create a .env.local file and add your Firebase config variables:
+
+```env
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+```
+
+Replace the placeholders with your actual Firebase config values.
+
+## Step 4: Run the Application
+
+Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Project Structure
 
-## Learn More
+```
+/app           - Next.js pages and routing
+/components    - UI components (Header, Footer, etc.)
+/firebase      - Firebase initialization and auth logic
+/public       - Static files like images and favicon
+/styles       - CSS and styling files
+```
 
-To learn more about Next.js, take a look at the following resources:
+#### Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Firebase Authentication (Email/password login)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Server-side Rendering (SSR) with Next.js
 
-## Deploy on Vercel
+- Protected routes for authenticated users only
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Troubleshooting
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- If you run into dependency issues, try deleting node_modules and package-lock.- json or yarn.lock and reinstall.
+
+Make sure your Firebase project is properly configured and Authentication is enabled.
