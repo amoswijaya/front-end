@@ -30,7 +30,8 @@ npm install
 yarn install
 ```
 
-Step 3: Configure Firebase
+## Step 3: Configure Firebase
+
 Create a Firebase Project: Go to Firebase Console and create a new project.
 
 Add a Web App: In your Firebase project, add a web application and copy the Firebase config.
